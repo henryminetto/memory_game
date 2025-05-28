@@ -1,0 +1,42 @@
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 600px;
+  margin-inline: auto;
+  gap: 1.5rem;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  z-index: 3;
+
+  >img {
+    position: absolute;
+    inset: 0;
+    /* width: 100%;
+    height: 100%; */
+    display: flex;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .verse {
+    z-index: 1;
+  }
+
+  .face {
+    z-index: 0;
+  }
+}
+
+.showFace {
+  .verse {
+    z-index: 0;
+  }
+
+  .face {
+    z-index: 1;
+  }
+}
